@@ -113,12 +113,12 @@ def render(scene, number):
     for i,c in enumerate(["#ff6058","#ffbd2d","#28c840"]):
         d.ellipse((43+i*25,108,56+i*25,121),fill=c)
     box(d,(595,100,1240,131),"#e9ebef",radius=6)
-    text(d,(615,100),"搜索（⌘ K）",18,MUTED)
+    text(d,(615,100),"搜索（Ctrl+K）",18,MUTED)
     text(d,(1680,99),"—  □  ×",18,MUTED)
     # Rail.
     d.rectangle((24,140,115,H-133),fill="#edf1f8")
     avatar(d,46,162,"林","#7187bc",46)
-    for idx,(label,symbol) in enumerate([( "消息", "≡"),("日历","日"),("云文档","文"),("工作台","台"),("任务","✓")]):
+    for idx,(label,symbol) in enumerate([( "消息", "≡"),("日历","日"),("云文档","文"),("工作台","台"),("任务","任")]):
         y = 244+idx*95
         if idx==0: box(d,(33,y-13,105,y+69),"#dbe7ff",radius=9)
         text(d,(59,y-5),symbol,27,BLUE if idx==0 else "#646a73")
@@ -140,7 +140,7 @@ def render(scene, number):
     title = "合同审查机器人" if scene["kind"]=="private" else "合同审核协作群"
     text(d,(441,164),title,27)
     text(d,(441,205),"机器人  ·  应用消息" if scene['kind']=="private" else "5 位成员  ·  商务 / 运营 / 法务 / 财务",17,MUTED)
-    text(d,(1583,172),"⌕    ☎    ···",24,"#646a73")
+    text(d,(1500,172),"搜索   通话   ···",22,"#646a73")
     d.line((412,242,W-24,242),fill=BORDER,width=1)
     text(d,(979,258),"今天  10:24",16,MUTED)
     # Human trigger bubble.
@@ -220,7 +220,7 @@ def render(scene, number):
     # Message composer, kept below the message content.
     composer=H-264
     d.line((412,composer,W-24,composer),fill=BORDER)
-    text(d,(444,composer+13),"Aa    ☺    ＋    @    ⊞",23,MUTED)
+    text(d,(444,composer+13),"Aa    表情    +    @    文件",23,MUTED)
     text(d,(444,composer+62),"发送给 "+title,21,"#b2b6bd")
     box(d,(1640,composer+70,1738,composer+109),"#e8efff",radius=6)
     text(d,(1664,composer+76),"发送",19,BLUE)
