@@ -1,5 +1,5 @@
 {
-  "name": "feishu-contract-chat-bot",
+  "name": "cross-functional-contract-copilot",
   "version": "0.1.0",
   "private": true,
   "type": "module",
@@ -17,8 +17,9 @@
     "diagnose": "pnpm build && node scripts/diagnose.mjs",
     "diagnose:import": "pnpm build && node scripts/test-feishu-import.mjs",
     "tasks:backfill": "pnpm build && node scripts/backfill-tasks.mjs",
-    "demo": "pnpm build && node scripts/demo.mjs",
-    "verify:live": "pnpm build && node scripts/live-smoke.mjs"
+    "demo": "pnpm build && node scripts/demo.mjs && node scripts/export-portfolio.mjs",
+    "verify:live": "pnpm build && node scripts/live-smoke.mjs",
+    "docs:images": "pnpm demo && python scripts/render-scenes.py"
   },
   "dependencies": {
     "@larksuiteoapi/node-sdk": "^1.49.0",
@@ -40,5 +41,6 @@
     "@larksuiteoapi/node-sdk": {
       "axios": "1.18.1"
     }
-  }
+  },
+  "description": "Role-specific contract revision guidance and task follow-up for Finance, Operations, Commercial, and Legal in Feishu."
 }

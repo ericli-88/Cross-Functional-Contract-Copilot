@@ -1,59 +1,67 @@
-# 安装与飞书配置
+# Setup and configuration
 
-## 本地启动
+## Local installation
 
-使用 Node.js 22/24 和 pnpm 11.9.0，执行 README 中的安装步骤，复制 `.env.example` 并填写凭证。`pnpm dev` 监听代码变化，生产运行 `pnpm build` 后执行 `pnpm start`。
+Use Node.js 22 or 24 and pnpm 11.9.0. Run `pnpm install --frozen-lockfile`, `pnpm typecheck`, `pnpm test`, and `pnpm demo` first. These checks are offline and require no credentials.
 
-项目采用 HTTP 回调，不是 Python 长连接项目。开放平台事件地址为公网 HTTPS 域名加 `/feishu/events`。本机可使用自行安装的 Cloudflare Tunnel：`cloudflared tunnel --url http://localhost:3000`。临时域名每次变化后都要更新开放平台请求地址；生产建议固定域名。
+Copy `.env.example` to `.env`: `Copy-Item .env.example .env` in PowerShell, or `cp .env.example .env` on macOS/Linux. Supply your own app credentials and model endpoint. The application uses an HTTP webhook, not WebSocket event delivery.
 
-## 飞书控制台
+## Feishu console
 
-1. 创建企业自建应用，启用机器人。
-2. 在凭证页复制 App ID、App Secret；在事件加密策略页复制 Verification Token，启用加密时填写 Encrypt Key。
-3. 事件订阅方式选择开发者服务器，填写 HTTPS 回调，订阅 `im.message.receive_v1`。
-4. 开通所需权限并发布应用版本。把机器人加入目标群，应用可用范围包含参与者。
-5. 确保机器人有文档读取权限，目标群成员可编辑原文档。
-6. 测试群可先用 `FEISHU_CONTRACT_CHAT_ID=*`，发送 `@机器人 我是谁` 后把实际群 ID 写回配置。修改 `.env` 后需重启。
+1. Create an enterprise custom app and enable its bot capability.
+2. Copy App ID, App Secret, and Verification Token. If event encryption is enabled, configure the same Encrypt Key locally.
+3. Set the event subscription to a developer server at `https://your-domain.example/feishu/events`; subscribe to `im.message.receive_v1`.
+4. Enable required scopes, publish an application version, and add the bot to the target group. The app availability range must include participants.
+5. Grant the bot access to the test document. Confirm that the intended collaborators can access the original document.
+6. Set `FEISHU_CONTRACT_CHAT_ID` to the intended group. `*` is supported for a controlled initial setup, but a fixed group is preferable for production. Restart after editing `.env`.
 
-## 权限分组
+Start development with `pnpm dev`, or run `pnpm build` and `pnpm start`. The default port is 3000; `GET /healthz` returns `{"ok":true}`. For a local HTTPS tunnel, a separately installed Cloudflare Tunnel can use `cloudflared tunnel --url http://localhost:3000`. Update the console callback when a temporary hostname changes.
 
-以下权限来自现有实现和项目部署资料；控制台可能显示细分权限或等价权限，按实际 API 报错核对并发布。
+## Runtime language
 
-| 功能 | 权限标识 |
+The current deployment uses primarily Chinese command patterns, cards, and model output. English portfolio figures are documentation views, not commands to copy into a live bot. Exact command literals are implemented in [`intentParser.ts`](../src/chat/intentParser.ts) and returned by the runtime help formatter in [`reviewCard.ts`](../src/review/reviewCard.ts). A document URL plus a bot mention triggers review without an additional language-specific review phrase.
+
+## Environment configuration
+
+- `FEISHU_APP_ID`, `FEISHU_APP_SECRET`, `FEISHU_VERIFICATION_TOKEN`: required app identity and event verification.
+- `FEISHU_ENCRYPT_KEY`: use the event encryption key when encryption is enabled.
+- `FEISHU_BOT_MENTION_NAME`: match the bot's display name in group mentions.
+- `FEISHU_CONTRACT_CHAT_ID`: group scope.
+- `AI_API_KEY`, `AI_BASE_URL`, `AI_MODEL`: generic OpenAI-compatible Chat Completions configuration.
+- `ARK_API_KEY`, `ARK_BASE_URL`, `ARK_VISION_MODEL` / `ARK_MODEL`: ARK configuration, with priority over generic variables.
+- Legacy `ANTHROPIC_*` variable names remain compatible; the protocol is still Chat Completions, not Anthropic Messages.
+- `OWNER_{COMMERCIAL,OPERATIONS,LEGAL,FINANCE}_USER_IDS`: comma-separated configured owners. Corresponding `_NAMES` values align by position. Singular `_USER_ID` / `_NAME` variables are also supported.
+- Environment owners take precedence over chat registration. Registration stores one owner per role; multiple owners are configured through environment defaults.
+- `FEISHU_DOCUMENT_ARCHIVE_ENABLED`, `FEISHU_TASKS_ENABLED`: optional integration switches.
+- `FEISHU_CONTRACT_ROOT_FOLDER_TOKEN`: optional archive root. `DATA_DIR` defaults to `./data`.
+- `REVIEW_TEST_CC_ENABLED` and `REVIEW_TEST_CC_USER_IDS`: optional test-recipient routing; disabled by default.
+
+Set one coherent provider configuration. Avoid combining a key, model and URL from different services. Use a model or endpoint available in your own account.
+
+## Permission groups
+
+Scope names below reflect the implementation and inherited deployment materials. Verify exact scope alternatives in your tenant's console and publish the application after changes.
+
+| Integration | Scope identifiers |
 | --- | --- |
-| 群消息与机器人发送 | `im:message.group_at_msg:readonly`、`im:message.group_msg`、`im:message.group_msg.include_bot:read`、`im:message:send_as_bot` |
-| 群信息与用户显示名 | `im:chat:readonly`、`contact:user.base:readonly`、`contact:user.basic_profile:readonly` |
-| 在线文档与知识库读取 | `docx:document:readonly`、`docs:document.content:read`、`drive:drive:readonly`、`drive:drive.metadata:readonly`、`wiki:wiki:readonly`、`wiki:node:read` |
-| 文件夹、快捷方式与权限 | `drive:file`、`space:folder:create`、`space:document:shortcut`、`docs:permission.member:create`、`docs:permission.setting:write_only` |
-| docx 版本快照 | `drive:drive:version` |
-| 任务、状态与版本评论 | `task:task:write`、`task:comment:write` |
-| 可选导入诊断／扩展 | `docs:document:import`；普通附件聊天流程不调用导入 |
+| Group messages and bot sends | `im:message.group_at_msg:readonly`, `im:message.group_msg`, `im:message.group_msg.include_bot:read`, `im:message:send_as_bot` |
+| Group identity and display names | `im:chat:readonly`, `contact:user.base:readonly`, `contact:user.basic_profile:readonly` |
+| Documents and wiki | `docx:document:readonly`, `docs:document.content:read`, `drive:drive:readonly`, `drive:drive.metadata:readonly`, `wiki:wiki:readonly`, `wiki:node:read` |
+| Folders, shortcuts and permissions | `drive:file`, `space:folder:create`, `space:document:shortcut`, `docs:permission.member:create`, `docs:permission.setting:write_only` |
+| Document snapshots | `drive:drive:version` |
+| Tasks and comments | `task:task:write`, `task:comment:write` |
+| Optional import diagnostics | `docs:document:import`; ordinary attachment chat review does not invoke import |
 
-## 配置要点
+## Troubleshooting
 
-`ARK_*` 优先于 `AI_*`，再兼容旧 `ANTHROPIC_*` 变量名；实际网络协议是 Chat Completions，并不调用 Anthropic Messages。设置一组服务商配置即可，避免跨服务商混用 key、URL、model。
-
-单数 `OWNER_*_USER_ID` 与复数 `OWNER_*_USER_IDS` 兼容；复数优先。相同职能可有多个负责人。固定环境变量负责人优先于群内注册结果。测试抄送默认关闭。
-
-`FEISHU_DOCUMENT_ARCHIVE_ENABLED=false` 可关闭归档与共享权限调整；`FEISHU_TASKS_ENABLED=false` 可关闭任务写入。数据目录由 `DATA_DIR` 指定，默认 `./data`。
-
-## 排错
-
-| 现象 | 检查 |
+| Symptom | Check |
 | --- | --- |
-| 服务启动失败 | Node 版本、依赖安装、必填环境变量、端口占用 |
-| 健康检查正常但群里无响应 | 公网 HTTPS、回调路径、事件订阅、应用发布、目标群、机器人是否被 @ |
-| 回调 403 | Verification Token 是否一致；加密事件是否使用相同 Encrypt Key |
-| 文档读取失败 | 文档授权、应用权限与已发布版本；wiki 是否能解析底层文档 |
-| 模型失败 | key 是否启用、模型是否可用、URL 是否正确、服务商配额与超时 |
-| 任务／归档失败 | 对应写权限是否发布；检查中文提示与受限日志 |
-| 附件不识别 | 扩展名与正文是否可抽取；扫描 PDF、旧 DOC 请转换 |
+| Startup fails | Node version, installed dependencies, required environment variables, port conflicts |
+| Healthy service, no group response | Public HTTPS callback, event subscription, published app version, group scope and mention |
+| Callback 403 | Verification Token and Encrypt Key match the console |
+| Document read fails | Document authorization, application scopes and published version |
+| Model request fails | Active key, available model, correct endpoint, quota and timeout |
+| Task/archive failure | Published write scopes; review the restricted local diagnostic output |
+| Unreadable attachment | Convert legacy DOC/scanned files; use a readable DOCX or online document |
 
-默认日志可能包含群消息与文档元数据，勿提交公开仓库。`pnpm diagnose` 可能读取真实群消息，其输出也应保存在本地。
-
-## 官方接口资料
-
-- [飞书消息事件与消息 API](https://open.feishu.cn/document/uAjLw4CM/ukTMukTMukTM/reference/im-v1)
-- [飞书 docx 原始文本](https://open.feishu.cn/document/server-docs/docs/docs/docx-v1/document/raw_content)
-- [飞书 Node SDK](https://github.com/larksuite/node-sdk)
-- [OpenAI Chat Completions](https://developers.openai.com/api/reference/resources/chat/subresources/completions/methods/create)
+`pnpm diagnose` can read real group metadata/messages. Keep its output private. No live API test is required for the offline verification scope.

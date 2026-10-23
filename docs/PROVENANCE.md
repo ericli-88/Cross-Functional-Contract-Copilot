@@ -1,21 +1,19 @@
-# 版本来源与整理策略
+# Source provenance
 
-三个输入目录是同一 TypeScript 机器人项目的迭代版本；与工作区最初的 Python 空骨架不同。没有用空骨架替换已有机器人。
+The repository consolidates three iterations of the same TypeScript Feishu contract workflow. The latest source is the root project; earlier versions remain in `archive/legacy-v1/` and `archive/legacy-v2/`.
 
-| 原目录名 | 仓库位置 | 主要阶段 |
+| Source iteration | Repository location | Main progression |
 | --- | --- | --- |
-| 1. 合同审核群聊Bot - 不支持回复call | `archive/legacy-v1/` | 链接触发、四职能审查、基础状态 |
-| 2. 合同审核群聊Bot - atlink&回复 | `archive/legacy-v2/` | 增加附件文字抽取、回复消息关联与卡片支持 |
-| 合同审核群聊Bot | 根目录 | 增加归档、持续职能任务、完成／恢复与状态迁移 |
+| First desktop version | `archive/legacy-v1/` | Link-triggered review and basic ownership/state |
+| Reply/attachment iteration | `archive/legacy-v2/` | Attachment text extraction and replied-message association |
+| Latest desktop version | Root project | Archives, active departmental tasks, completion/reopening and state migration |
 
-第二版相对第一版增加 `attachmentText.ts`，并修改工作流、消息解析、存储、飞书适配与卡片。最新版进一步增加 `documentArchive.ts`、`taskCoordinator.ts`、`feishuErrors.ts`，扩展多人负责人、任务跟进与状态迁移。
+Original source, lockfiles, maintenance/deployment tools, and runtime reference material were retained. Credentials and backups, real runtime data, logs, node_modules, build output, personal tool settings and prior Git history were excluded from the clean public import. Selected app/group/user identifiers were replaced with stable examples.
 
-本次整理保留三版源码、依赖锁文件、部署和维护脚本，以及运行时依赖的 `.claude/skills/clinical-contract-review` 参考资料。排除了凭证与凭证备份、真实运行数据、日志、node_modules、dist、个人编辑器设置和旧 `.git` 历史。旧历史可能含敏感数据，因此公开仓库从干净提交开始。
+`source-manifest.json` records source-relative paths and original SHA-256 hashes at import. It is a provenance record, not a hash manifest for edited final files. Documentation rewrites, sanitization and the callback-authentication fix change some final contents.
 
-历史版本是参考归档，不进入根项目的构建与测试。历史 README 只代表当时说明，可能存在过期行为；当前 README 与验证用例是主线依据。第一版消息解析器包含历史乱码兼容字面量，保留原实现，根编码扫描跳过 archive。
+Historical versions are not built by the root project. Historical documentation and original review references remain in their original language and may describe older behavior. The English README and capability inventory describe the current source.
 
-[`source-manifest.json`](source-manifest.json) 记录复制时的文件路径和原始 SHA-256，用于追溯来源；它不是最终文件完整性清单。脱敏、主线认证修复、README 重写与构建文档调整会使部分最终文件与来源哈希不同。
+The portfolio update renames the project Cross-Functional Contract Copilot, replaces its presentation with English material, and adds readable English documentation figures. It preserves the actual Finance, Operations, Commercial and Legal roles and does not change runtime business logic.
 
-本次新增：跨平台 CI、11 场景离线演示及图片生成器、HTTP 回调认证回归测试、安装／验证／安全说明。修复未设置 Encrypt Key 时错误 Token 仍进入工作流的问题。历史部署信息中的真实应用、群与用户标识已替换为占位符。
-
-未自行为原始代码添加开源许可证。仓库公开可读不等同于授予开源许可；后续许可证由代码权利人决定。
+No software license was selected on behalf of the original rights holder. Public visibility alone does not grant an open-source license.

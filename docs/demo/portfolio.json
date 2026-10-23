@@ -1,0 +1,82 @@
+{
+  "title": "Cross-Functional Contract Copilot",
+  "subtitle": "One contract. Role-specific revision guidance. Shared follow-through.",
+  "simulated": true,
+  "localization": "English editorial summaries of a Chinese-language deployment; not an English runtime UI or live API recording.",
+  "contract": "Northstar Systems | Services Agreement",
+  "contractId": "HT-20261023-0001",
+  "roles": [
+    {
+      "key": "commercial",
+      "name": "Commercial",
+      "focus": "Scope and change-order exposure",
+      "risk": "Deliverables and charges for scope changes are not defined.",
+      "action": "Specify deliverables, scope boundaries, and change-order pricing.",
+      "owner": "Alex Morgan",
+      "references": [
+        "references/business-leader-review.md",
+        "references/general-risk-checklist.md"
+      ]
+    },
+    {
+      "key": "operations",
+      "name": "Operations",
+      "focus": "Acceptance and delivery execution",
+      "risk": "Acceptance lacks objective criteria and a feedback deadline.",
+      "action": "Define acceptance criteria, response windows, and client responsibilities.",
+      "owner": "Sam Rivera",
+      "references": [
+        "references/business-leader-review.md",
+        "references/general-risk-checklist.md"
+      ]
+    },
+    {
+      "key": "legal",
+      "name": "Legal",
+      "focus": "Liability and rights allocation",
+      "risk": "The agreement does not define a liability cap or the scope of compensation.",
+      "action": "Add a liability cap, IP ownership terms, and termination settlement provisions.",
+      "owner": "Taylor Chen",
+      "references": [
+        "references/legal-review.md"
+      ]
+    },
+    {
+      "key": "finance",
+      "name": "Finance",
+      "focus": "Cash flow and payment exposure",
+      "risk": "Payment is due 180 days after acceptance; late-payment protection is missing.",
+      "action": "Negotiate staged payments and add late-payment protections.",
+      "owner": "Jordan Lee",
+      "references": [
+        "references/finance-review.md"
+      ]
+    }
+  ],
+  "sourceScenes": [
+    "01-registration",
+    "02-link-review",
+    "03-private-task",
+    "04-no-change",
+    "05-revision",
+    "06-task-history",
+    "07-completed",
+    "08-reopened",
+    "09-attachment",
+    "10-archive",
+    "11-reset"
+  ],
+  "verified": {
+    "initialVersion": 1,
+    "revisedVersion": 2,
+    "initialRoleTasks": 4,
+    "unchangedContentSkipsAI": true,
+    "attachmentsConvertedToOnlineDocs": false
+  },
+  "limitations": [
+    "Commercial and Operations share a checklist",
+    "Recommendations do not rewrite contract text",
+    "Any configured owner can update a department status",
+    "Completion deletes the associated role task; reopening recreates it on the next review"
+  ]
+}

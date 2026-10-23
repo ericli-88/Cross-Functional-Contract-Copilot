@@ -1,11 +1,21 @@
-# 安全与数据
+# Security and data handling
 
-请勿将 `.env`、凭证备份、`data/`、日志和真实合同提交到 GitHub。公开仓库只包含配置占位符与虚构演示数据。
+Never commit `.env`, credential backups, `data/`, logs, real contracts, or private diagnostic output. This public repository uses placeholder configuration and fictional demo records.
 
-运行时会把合同正文、角色规则和部分文档元数据发送到你配置的 AI 服务商。请确认组织允许该数据处理方式。
+## Data flow
 
-当前归档逻辑会尝试把在线文档设置为组织内可编辑，并向合同群授予归档文件夹权限。部署前确认这一共享策略；不适用时设置 `FEISHU_DOCUMENT_ARCHIVE_ENABLED=false`。任务创建可用 `FEISHU_TASKS_ENABLED=false` 关闭。
+At runtime, contract text, role reference material, and selected document metadata are sent to the configured AI provider. Confirm that this is permitted by your organization's data policy.
 
-负责人可通过群指令注册；生产环境建议用 `OWNER_*_USER_IDS` 固定负责人，并限定 `FEISHU_CONTRACT_CHAT_ID`。本地 JSON 状态适用于单实例，暂不支持多副本同时写入。日志可能包含消息文本和文档标识，需按内部数据政策限制访问与保留时间。
+With document archiving enabled, the bot attempts to make linked online documents editable within the organization and grants the contract group access to its archive folder. Set `FEISHU_DOCUMENT_ARCHIVE_ENABLED=false` if this sharing behavior is inappropriate. Set `FEISHU_TASKS_ENABLED=false` to disable task synchronization.
 
-报告漏洞请使用 GitHub 私密漏洞报告功能（若已启用），不要在公开 Issue 中附上密钥、合同或个人信息。误提交密钥后，应立即在相应服务商处撤销并轮换。
+## Access and lifecycle boundaries
+
+Environment-configured owners override chat registration. Any configured owner can update any department's completion status. Local-record reset is available within the configured group and is not restricted to a role owner. Use a controlled group and a fixed `FEISHU_CONTRACT_CHAT_ID` in production.
+
+Completing a department deletes its associated Feishu role task and local mapping. Reopening restores active status; the next changed-content review creates a replacement task. Do not treat task comments as an immutable audit trail.
+
+Local JSON storage is intended for a single instance. Restrict and back up the state directory. Logs can contain message text and document identifiers, so limit log access and retention.
+
+## Reporting
+
+Use GitHub private vulnerability reporting if enabled. Do not publish secrets, contracts, or personal information in an issue. If a credential is exposed, revoke and rotate it at the provider immediately.

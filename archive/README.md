@@ -1,5 +1,5 @@
-# 历史版本
+# Historical versions
 
-`legacy-v1/` 和 `legacy-v2/` 保存前两个桌面版本的脱敏源文件、依赖配置、规则与维护资料。它们不参与根项目的构建、CI 或编码扫描。历史说明可能与当前实现不同，也不保证能在当前服务商环境运行。
+`legacy-v1/` and `legacy-v2/` retain sanitized source, dependency configuration, checklists and maintenance material from earlier iterations. They are reference snapshots and are excluded from root builds, CI tests and the root encoding scan.
 
-使用与开发请从根目录开始。版本差异和整理范围见 [`docs/PROVENANCE.md`](../docs/PROVENANCE.md)。
+Their original-language documentation can contain outdated behavior. Use the root English README and [current capability inventory](../docs/CAPABILITIES.md) for the current implementation. See [source provenance](../docs/PROVENANCE.md) for the consolidation policy.
