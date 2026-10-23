@@ -1,0 +1,471 @@
+{
+  "simulated": true,
+  "description": "Real workflow and card formatters; in-memory Feishu and deterministic AI fixtures. No real messages or contracts.",
+  "scenes": [
+    {
+      "id": "01-registration",
+      "title": "负责人注册与身份识别",
+      "userText": "@合同审查机器人 我是商务负责人",
+      "text": "已注册 商务 负责人：林晓（user_id 已保存）。",
+      "kind": "text"
+    },
+    {
+      "id": "02-link-review",
+      "title": "发送文档链接，启动四职能首审",
+      "userText": "@合同审查机器人 https://example.feishu.cn/docx/DEMO_CONTRACT",
+      "kind": "group",
+      "card": {
+        "config": {
+          "wide_screen_mode": true
+        },
+        "header": {
+          "template": "blue",
+          "title": {
+            "tag": "plain_text",
+            "content": "合同 AI 审查完成｜HT-20261023-0001 V1"
+          }
+        },
+        "elements": [
+          {
+            "tag": "markdown",
+            "content": "<at id=commercial_1></at> <at id=operations_1></at> <at id=legal_1></at> <at id=finance_1></at>\n\n**合同名称：星河科技 · 软件服务合同（虚构）**\n**合同编号：HT-20261023-0001**\n**流程：首次审查**\n**版本：V1**\n**本次提交人：林晓**\n**合同链接：[打开 V1 合同](https://example.feishu.cn/docx/DEMO_CONTRACT)**\n**版本文件夹：[查看合同归档](https://example.feishu.cn/drive/folder/folder_2)**\n\n**部门处理状态**\n- 商务：处理中\n- 运营：处理中\n- 法务：处理中\n- 财务：处理中\n\n**各职能 general 建议**\n**商务：中风险，补充材料或修改后再审**\n- 服务范围边界：交付项与变更收费未约定，建议补充工作说明书。\n- 建议：明确交付清单、服务范围及变更报价机制。\n\n**运营：中风险，补充材料或修改后再审**\n- 验收标准不清：验收缺少客观指标与反馈期限，影响排期和回款。\n- 建议：补充验收指标、反馈期限与客户配合义务。\n\n**法务：高风险，补充材料或修改后再审**\n- 责任上限缺失：赔偿范围与责任上限未约定，需要法务重点复核。\n- 建议：补充责任上限、知识产权归属与终止结算条款。\n\n**财务：中风险，补充材料或修改后再审**\n- 付款周期过长：验收后180日付款形成资金占用，且未约定逾期责任。\n- 建议：协商分期付款并补充逾期付款责任。\n\n详细建议已写入各职能任务；首次审查会私信任务入口，后续版本在同一任务内持续更新。"
+          },
+          {
+            "tag": "action",
+            "actions": [
+              {
+                "tag": "button",
+                "text": {
+                  "tag": "plain_text",
+                  "content": "打开合同"
+                },
+                "type": "primary",
+                "multi_url": {
+                  "url": "https://example.feishu.cn/docx/DEMO_CONTRACT",
+                  "pc_url": "https://example.feishu.cn/docx/DEMO_CONTRACT",
+                  "ios_url": "https://example.feishu.cn/docx/DEMO_CONTRACT",
+                  "android_url": "https://example.feishu.cn/docx/DEMO_CONTRACT"
+                }
+              },
+              {
+                "tag": "button",
+                "text": {
+                  "tag": "plain_text",
+                  "content": "查看历史文件"
+                },
+                "type": "default",
+                "multi_url": {
+                  "url": "https://example.feishu.cn/drive/folder/folder_2",
+                  "pc_url": "https://example.feishu.cn/drive/folder/folder_2",
+                  "ios_url": "https://example.feishu.cn/drive/folder/folder_2",
+                  "android_url": "https://example.feishu.cn/drive/folder/folder_2"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "text": "已开始审查：星河科技 · 软件服务合同（虚构）\n合同编号：HT-20261023-0001\n版本：V1\n机器人正在分别生成商务、运营、法务、财务建议。已完成的职能不会再收到任务或私信提醒。"
+    },
+    {
+      "id": "03-private-task",
+      "title": "负责人私信：审查结果与任务入口",
+      "userText": "首次审查后，负责人收到对应职能入口卡片",
+      "kind": "private",
+      "card": {
+        "config": {
+          "wide_screen_mode": true
+        },
+        "header": {
+          "template": "orange",
+          "title": {
+            "tag": "plain_text",
+            "content": "合同 AI 审查｜财务｜HT-20261023-0001 V1"
+          }
+        },
+        "elements": [
+          {
+            "tag": "markdown",
+            "content": "**负责人：许安**\n**合同名称：星河科技 · 软件服务合同（虚构）**\n**合同编号：HT-20261023-0001**\n**流程：首次审查**\n**版本：V1**\n**本次提交人：林晓**\n**合同链接：[打开 V1 合同](https://example.feishu.cn/docx/DEMO_CONTRACT)**\n**任务与历史：[打开财务任务](https://example.feishu.cn/task/task-finance)**\n**风险等级：中**\n**处理建议：补充材料或修改后再审**\n**置信度：88%**\n\n**部门处理状态**\n- 商务：处理中\n- 运营：处理中\n- 法务：处理中\n- 财务：处理中\n\n详细审查建议已写入对应飞书任务。请点击下方按钮查看任务、合同和历史文件。"
+          },
+          {
+            "tag": "action",
+            "actions": [
+              {
+                "tag": "button",
+                "text": {
+                  "tag": "plain_text",
+                  "content": "打开任务 / 历史"
+                },
+                "type": "primary",
+                "multi_url": {
+                  "url": "https://example.feishu.cn/task/task-finance",
+                  "pc_url": "https://example.feishu.cn/task/task-finance",
+                  "ios_url": "https://example.feishu.cn/task/task-finance",
+                  "android_url": "https://example.feishu.cn/task/task-finance"
+                }
+              },
+              {
+                "tag": "button",
+                "text": {
+                  "tag": "plain_text",
+                  "content": "打开合同"
+                },
+                "type": "default",
+                "multi_url": {
+                  "url": "https://example.feishu.cn/docx/DEMO_CONTRACT",
+                  "pc_url": "https://example.feishu.cn/docx/DEMO_CONTRACT",
+                  "ios_url": "https://example.feishu.cn/docx/DEMO_CONTRACT",
+                  "android_url": "https://example.feishu.cn/docx/DEMO_CONTRACT"
+                }
+              },
+              {
+                "tag": "button",
+                "text": {
+                  "tag": "plain_text",
+                  "content": "合同文件夹"
+                },
+                "type": "default",
+                "multi_url": {
+                  "url": "https://example.feishu.cn/drive/folder/folder_2",
+                  "pc_url": "https://example.feishu.cn/drive/folder/folder_2",
+                  "ios_url": "https://example.feishu.cn/drive/folder/folder_2",
+                  "android_url": "https://example.feishu.cn/drive/folder/folder_2"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "text": "已开始审查：星河科技 · 软件服务合同（虚构）\n合同编号：HT-20261023-0001\n版本：V1\n机器人正在分别生成商务、运营、法务、财务建议。已完成的职能不会再收到任务或私信提醒。"
+    },
+    {
+      "id": "04-no-change",
+      "title": "内容未变，跳过重复审查",
+      "userText": "@合同审查机器人 https://example.feishu.cn/docx/DEMO_CONTRACT",
+      "kind": "group",
+      "card": {
+        "config": {
+          "wide_screen_mode": true
+        },
+        "header": {
+          "template": "green",
+          "title": {
+            "tag": "plain_text",
+            "content": "未生成新版本｜HT-20261023-0001"
+          }
+        },
+        "elements": [
+          {
+            "tag": "markdown",
+            "content": "**合同名称：星河科技 · 软件服务合同（虚构）**\n**流程：修改完毕后复审**\n**当前版本：V1**\n**最近一次提交人：林晓**\n**合同链接：[打开当前合同](https://example.feishu.cn/docx/DEMO_CONTRACT)**\n\n**部门处理状态**\n- 商务：处理中\n- 运营：处理中\n- 法务：处理中\n- 财务：处理中\n\n机器人重新读取了飞书文档，但内容和上一次审查版本一致。\n本次只发送这张群内说明卡片，不创建新的审查版本，也不私信负责人。"
+          },
+          {
+            "tag": "action",
+            "actions": [
+              {
+                "tag": "button",
+                "text": {
+                  "tag": "plain_text",
+                  "content": "打开合同"
+                },
+                "type": "primary",
+                "multi_url": {
+                  "url": "https://example.feishu.cn/docx/DEMO_CONTRACT",
+                  "pc_url": "https://example.feishu.cn/docx/DEMO_CONTRACT",
+                  "ios_url": "https://example.feishu.cn/docx/DEMO_CONTRACT",
+                  "android_url": "https://example.feishu.cn/docx/DEMO_CONTRACT"
+                }
+              },
+              {
+                "tag": "button",
+                "text": {
+                  "tag": "plain_text",
+                  "content": "查看历史文件"
+                },
+                "type": "default",
+                "multi_url": {
+                  "url": "https://example.feishu.cn/drive/folder/folder_2",
+                  "pc_url": "https://example.feishu.cn/drive/folder/folder_2",
+                  "ios_url": "https://example.feishu.cn/drive/folder/folder_2",
+                  "android_url": "https://example.feishu.cn/drive/folder/folder_2"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "text": "已开始审查：星河科技 · 软件服务合同（虚构）\n合同编号：HT-20261023-0001\n版本：V1\n机器人正在分别生成商务、运营、法务、财务建议。已完成的职能不会再收到任务或私信提醒。"
+    },
+    {
+      "id": "05-revision",
+      "title": "修改后复审，建议追加到原任务",
+      "userText": "@合同审查机器人 修改完毕 https://example.feishu.cn/docx/DEMO_CONTRACT",
+      "kind": "group",
+      "card": {
+        "config": {
+          "wide_screen_mode": true
+        },
+        "header": {
+          "template": "blue",
+          "title": {
+            "tag": "plain_text",
+            "content": "合同 AI 审查完成｜HT-20261023-0001 V2"
+          }
+        },
+        "elements": [
+          {
+            "tag": "markdown",
+            "content": "<at id=commercial_1></at> <at id=operations_1></at> <at id=legal_1></at> <at id=finance_1></at>\n\n**合同名称：星河科技 · 软件服务合同（虚构）**\n**合同编号：HT-20261023-0001**\n**流程：修改完毕后复审**\n**版本：V2**\n**最近一次提交人：林晓**\n**合同链接：[打开 V2 合同](https://example.feishu.cn/docx/DEMO_CONTRACT)**\n**版本文件夹：[查看合同归档](https://example.feishu.cn/drive/folder/folder_2)**\n\n**部门处理状态**\n- 商务：处理中\n- 运营：处理中\n- 法务：处理中\n- 财务：处理中\n\n**各职能 general 建议**\n**商务：中风险，补充材料或修改后再审**\n- 服务范围边界：交付项与变更收费未约定，建议补充工作说明书。\n- 建议：明确交付清单、服务范围及变更报价机制。\n\n**运营：中风险，补充材料或修改后再审**\n- 验收标准不清：验收缺少客观指标与反馈期限，影响排期和回款。\n- 建议：补充验收指标、反馈期限与客户配合义务。\n\n**法务：高风险，补充材料或修改后再审**\n- 责任上限缺失：赔偿范围与责任上限未约定，需要法务重点复核。\n- 建议：补充责任上限、知识产权归属与终止结算条款。\n\n**财务：中风险，补充材料或修改后再审**\n- 付款周期过长：验收后180日付款形成资金占用，且未约定逾期责任。\n- 建议：协商分期付款并补充逾期付款责任。\n\n详细建议已写入各职能任务；首次审查会私信任务入口，后续版本在同一任务内持续更新。"
+          },
+          {
+            "tag": "action",
+            "actions": [
+              {
+                "tag": "button",
+                "text": {
+                  "tag": "plain_text",
+                  "content": "打开合同"
+                },
+                "type": "primary",
+                "multi_url": {
+                  "url": "https://example.feishu.cn/docx/DEMO_CONTRACT",
+                  "pc_url": "https://example.feishu.cn/docx/DEMO_CONTRACT",
+                  "ios_url": "https://example.feishu.cn/docx/DEMO_CONTRACT",
+                  "android_url": "https://example.feishu.cn/docx/DEMO_CONTRACT"
+                }
+              },
+              {
+                "tag": "button",
+                "text": {
+                  "tag": "plain_text",
+                  "content": "查看历史文件"
+                },
+                "type": "default",
+                "multi_url": {
+                  "url": "https://example.feishu.cn/drive/folder/folder_2",
+                  "pc_url": "https://example.feishu.cn/drive/folder/folder_2",
+                  "ios_url": "https://example.feishu.cn/drive/folder/folder_2",
+                  "android_url": "https://example.feishu.cn/drive/folder/folder_2"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "text": "已开始审查：星河科技 · 软件服务合同（虚构）\n合同编号：HT-20261023-0001\n版本：V2\n机器人正在分别生成商务、运营、法务、财务建议。已完成的职能不会再收到任务或私信提醒。"
+    },
+    {
+      "id": "06-task-history",
+      "title": "一份合同，每个职能一个任务",
+      "kind": "task",
+      "task": {
+        "summary": "[财务] HT-20261023-0001 星河科技 · 软件服务合同（虚构）",
+        "description": "合同：HT-20261023-0001\n职能：财务\n当前版本：V1\n最近提交人：林晓\n风险等级：中\nAI 建议：补充材料或修改后再审\n合同链接：https://example.feishu.cn/docx/DEMO_CONTRACT\n历史文件夹：https://example.feishu.cn/drive/folder/folder_2\n完整的每一版 AI 建议都保存在本任务的评论中。是否处理完成只由负责人确认，AI 不会自动判断。",
+        "assigneeUserIds": [
+          "finance_1"
+        ],
+        "clientToken": "HT-20261023-0001-finance",
+        "contractUrl": "https://example.feishu.cn/docx/DEMO_CONTRACT",
+        "taskGuid": "task-finance",
+        "taskUrl": "https://example.feishu.cn/task/task-finance"
+      },
+      "comments": [
+        {
+          "taskGuid": "task-finance",
+          "content": "【HT-20261023-0001 V1 财务审查建议】\n流程：首次审查\n提交人：林晓\n合同链接：https://example.feishu.cn/docx/DEMO_CONTRACT\n风险等级：中\n处理建议：补充材料或修改后再审\n置信度：88%\n\n必须关注\n1. 付款周期过长：验收后180日付款形成资金占用，且未约定逾期责任。\n\n建议动作 / 修改建议\n1. 协商分期付款并补充逾期付款责任。\n\n审批提示\n1. 本结果为辅助建议，需由负责人复核。\n\n说明：以上为 AI 辅助建议，不代表问题已解决，也不会替负责人作出完成决定。"
+        },
+        {
+          "taskGuid": "task-finance",
+          "content": "【HT-20261023-0001 V2 财务审查建议】\n流程：修改完毕后复审\n提交人：林晓\n合同链接：https://example.feishu.cn/docx/DEMO_CONTRACT\n风险等级：中\n处理建议：补充材料或修改后再审\n置信度：88%\n\n必须关注\n1. 付款周期过长：验收后180日付款形成资金占用，且未约定逾期责任。\n\n建议动作 / 修改建议\n1. 协商分期付款并补充逾期付款责任。\n\n审批提示\n1. 本结果为辅助建议，需由负责人复核。\n\n说明：以上为 AI 辅助建议，不代表问题已解决，也不会替负责人作出完成决定。"
+        }
+      ]
+    },
+    {
+      "id": "07-completed",
+      "title": "负责人确认完成，同步群卡片状态",
+      "userText": "@合同审查机器人 HT-20261023-0001 财务已完成",
+      "kind": "group",
+      "card": {
+        "config": {
+          "wide_screen_mode": true
+        },
+        "header": {
+          "template": "green",
+          "title": {
+            "tag": "plain_text",
+            "content": "财务已确认完成｜HT-20261023-0001"
+          }
+        },
+        "elements": [
+          {
+            "tag": "markdown",
+            "content": "**合同名称：星河科技 · 软件服务合同（虚构）**\n**操作人：许安**\n**财务状态：负责人已确认处理完成**\n\n后续版本将不再给财务负责人发送提醒，也不会继续向该职能任务追加版本建议。\n\n以上状态由负责人主动确认，不是 AI 判断。\n\n**全部部门状态**\n- 商务：处理中\n- 运营：处理中\n- 法务：处理中\n- 财务：已确认完成（V2），由 许安 确认"
+          },
+          {
+            "tag": "action",
+            "actions": [
+              {
+                "tag": "button",
+                "text": {
+                  "tag": "plain_text",
+                  "content": "打开合同"
+                },
+                "type": "primary",
+                "multi_url": {
+                  "url": "https://example.feishu.cn/docx/DEMO_CONTRACT",
+                  "pc_url": "https://example.feishu.cn/docx/DEMO_CONTRACT",
+                  "ios_url": "https://example.feishu.cn/docx/DEMO_CONTRACT",
+                  "android_url": "https://example.feishu.cn/docx/DEMO_CONTRACT"
+                }
+              },
+              {
+                "tag": "button",
+                "text": {
+                  "tag": "plain_text",
+                  "content": "查看历史文件"
+                },
+                "type": "default",
+                "multi_url": {
+                  "url": "https://example.feishu.cn/drive/folder/folder_2",
+                  "pc_url": "https://example.feishu.cn/drive/folder/folder_2",
+                  "ios_url": "https://example.feishu.cn/drive/folder/folder_2",
+                  "android_url": "https://example.feishu.cn/drive/folder/folder_2"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "text": "已开始审查：星河科技 · 软件服务合同（虚构）\n合同编号：HT-20261023-0001\n版本：V2\n机器人正在分别生成商务、运营、法务、财务建议。已完成的职能不会再收到任务或私信提醒。"
+    },
+    {
+      "id": "08-reopened",
+      "title": "恢复处理，继续接收后续版本更新",
+      "userText": "@合同审查机器人 HT-20261023-0001 财务恢复处理",
+      "kind": "group",
+      "card": {
+        "config": {
+          "wide_screen_mode": true
+        },
+        "header": {
+          "template": "blue",
+          "title": {
+            "tag": "plain_text",
+            "content": "财务已恢复处理｜HT-20261023-0001"
+          }
+        },
+        "elements": [
+          {
+            "tag": "markdown",
+            "content": "**合同名称：星河科技 · 软件服务合同（虚构）**\n**操作人：许安**\n**财务状态：处理中**\n\n后续版本会恢复向财务负责人发送任务更新。\n\n以上状态由负责人主动确认，不是 AI 判断。\n\n**全部部门状态**\n- 商务：处理中\n- 运营：处理中\n- 法务：处理中\n- 财务：处理中"
+          },
+          {
+            "tag": "action",
+            "actions": [
+              {
+                "tag": "button",
+                "text": {
+                  "tag": "plain_text",
+                  "content": "打开合同"
+                },
+                "type": "primary",
+                "multi_url": {
+                  "url": "https://example.feishu.cn/docx/DEMO_CONTRACT",
+                  "pc_url": "https://example.feishu.cn/docx/DEMO_CONTRACT",
+                  "ios_url": "https://example.feishu.cn/docx/DEMO_CONTRACT",
+                  "android_url": "https://example.feishu.cn/docx/DEMO_CONTRACT"
+                }
+              },
+              {
+                "tag": "button",
+                "text": {
+                  "tag": "plain_text",
+                  "content": "查看历史文件"
+                },
+                "type": "default",
+                "multi_url": {
+                  "url": "https://example.feishu.cn/drive/folder/folder_2",
+                  "pc_url": "https://example.feishu.cn/drive/folder/folder_2",
+                  "ios_url": "https://example.feishu.cn/drive/folder/folder_2",
+                  "android_url": "https://example.feishu.cn/drive/folder/folder_2"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "text": "已开始审查：星河科技 · 软件服务合同（虚构）\n合同编号：HT-20261023-0001\n版本：V2\n机器人正在分别生成商务、运营、法务、财务建议。已完成的职能不会再收到任务或私信提醒。"
+    },
+    {
+      "id": "09-attachment",
+      "title": "回复普通附件，执行基础文字审查",
+      "userText": "回复：示例服务合同.txt\n@合同审查机器人",
+      "kind": "group",
+      "card": {
+        "config": {
+          "wide_screen_mode": true
+        },
+        "header": {
+          "template": "blue",
+          "title": {
+            "tag": "plain_text",
+            "content": "合同 AI 审查完成｜HT-20261023-0002 V1"
+          }
+        },
+        "elements": [
+          {
+            "tag": "markdown",
+            "content": "<at id=commercial_1></at> <at id=operations_1></at> <at id=legal_1></at> <at id=finance_1></at>\n\n**合同名称：示例服务合同.txt**\n**合同编号：HT-20261023-0002**\n**流程：首次审查**\n**版本：V1**\n**本次提交人：林晓**\n**合同链接：普通文件附件，不支持跳转链接**\n\n**部门处理状态**\n- 商务：处理中\n- 运营：处理中\n- 法务：处理中\n- 财务：处理中\n\n**各职能 general 建议**\n**商务：中风险，补充材料或修改后再审**\n- 服务范围边界：交付项与变更收费未约定，建议补充工作说明书。\n- 建议：明确交付清单、服务范围及变更报价机制。\n\n**运营：中风险，补充材料或修改后再审**\n- 验收标准不清：验收缺少客观指标与反馈期限，影响排期和回款。\n- 建议：补充验收指标、反馈期限与客户配合义务。\n\n**法务：高风险，补充材料或修改后再审**\n- 责任上限缺失：赔偿范围与责任上限未约定，需要法务重点复核。\n- 建议：补充责任上限、知识产权归属与终止结算条款。\n\n**财务：中风险，补充材料或修改后再审**\n- 付款周期过长：验收后180日付款形成资金占用，且未约定逾期责任。\n- 建议：协商分期付款并补充逾期付款责任。\n\n详细建议已写入各职能任务；首次审查会私信任务入口，后续版本在同一任务内持续更新。"
+          }
+        ]
+      },
+      "text": "已开始审查：示例服务合同.txt\n合同编号：HT-20261023-0002\n版本：V1\n机器人正在分别生成商务、运营、法务、财务建议。已完成的职能不会再收到任务或私信提醒。"
+    },
+    {
+      "id": "10-archive",
+      "title": "按群归档，在线文档保留原链接与快照",
+      "kind": "archive",
+      "folders": [
+        {
+          "name": "合同",
+          "parentFolderToken": "",
+          "folderToken": "folder_1",
+          "folderUrl": "https://example.feishu.cn/drive/folder/folder_1"
+        },
+        {
+          "name": "HT-20261023-0001 星河科技 · 软件服务合同（虚构）",
+          "parentFolderToken": "folder_1",
+          "folderToken": "folder_2",
+          "folderUrl": "https://example.feishu.cn/drive/folder/folder_2"
+        }
+      ],
+      "versions": [
+        {
+          "documentToken": "DEMO_CONTRACT",
+          "name": "HT-20261023-0001 V1 审查快照",
+          "version": "snapshot-1"
+        },
+        {
+          "documentToken": "DEMO_CONTRACT",
+          "name": "HT-20261023-0001 V2 审查快照",
+          "version": "snapshot-2"
+        }
+      ],
+      "shortcuts": [
+        {
+          "documentToken": "DEMO_CONTRACT",
+          "documentType": "docx",
+          "parentFolderToken": "folder_2"
+        }
+      ]
+    },
+    {
+      "id": "11-reset",
+      "title": "清除本地合同审查记录",
+      "kind": "text",
+      "userText": "@合同审查机器人 删除记录 https://example.feishu.cn/docx/DEMO_CONTRACT",
+      "text": "已删除这份合同在机器人本地保存的审查记录。\n\n合同编号：HT-20261023-0001\n合同名称：星河科技 · 软件服务合同（虚构）\n已删除版本数：2\n文档链接：https://example.feishu.cn/docx/DEMO_CONTRACT\n\n这不会删除飞书文档本身，也不会删除负责人 user_id 配置。\n如果你接下来再次 @ 我并附上这份文档链接，我会把它当作一份新出现的合同重新首审。"
+    }
+  ]
+}

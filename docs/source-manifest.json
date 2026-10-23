@@ -1,0 +1,867 @@
+[
+  {
+    "version": "legacy-v1",
+    "path": ".dockerignore",
+    "sha256": "79cf0f39192db32ca7c0c11bdd55dd84f390ad5800f19f7f92356413f2b73a0a"
+  },
+  {
+    "version": "legacy-v1",
+    "path": ".env.example",
+    "sha256": "dca4047cbc8fa6ca989d03f9f09bbf063365402c22a50ccf7ffd6d500d65e40c"
+  },
+  {
+    "version": "legacy-v1",
+    "path": ".gitignore",
+    "sha256": "a82661d7cce672462c52a5411a4852d37dad0fcd895dff62ee22883a51d3e6b0"
+  },
+  {
+    "version": "legacy-v1",
+    "path": "check-bot.ps1",
+    "sha256": "c1a95f1e2cb43549f54055c164c88b6518fb8f290a8915625431b275858cf61e"
+  },
+  {
+    "version": "legacy-v1",
+    "path": "clear-bot-state.ps1",
+    "sha256": "f13c15c7ba47c9a4bb2a9d36ed99eb94b9f717ed5fd6bff298fbd6b09b6173c5"
+  },
+  {
+    "version": "legacy-v1",
+    "path": "docker-compose.yml",
+    "sha256": "5dc6962a647d8f2e95ead2c0a5b57d38d2edbb8717a2eb34efc4d42f6f63a1d2"
+  },
+  {
+    "version": "legacy-v1",
+    "path": "Dockerfile",
+    "sha256": "94c1c1257e1294602567037a96fb98bb5aef60794018d82d8bb7e8046968fc6d"
+  },
+  {
+    "version": "legacy-v1",
+    "path": "NEW_BOT_MIGRATION.md",
+    "sha256": "571ca3283b8309ec323460f18aa87b951639f1a792c8c7eff5ce3562bac7175a"
+  },
+  {
+    "version": "legacy-v1",
+    "path": "package.json",
+    "sha256": "47e7dfcb65796e93c8fcd2b2d964ff8ad822c51e37dd4d1494c083d646f0f474"
+  },
+  {
+    "version": "legacy-v1",
+    "path": "pnpm-lock.yaml",
+    "sha256": "5ccb4273c94746998fa3dea839d61def60d1c861a406d8bffd122292ed49e409"
+  },
+  {
+    "version": "legacy-v1",
+    "path": "pnpm-workspace.yaml",
+    "sha256": "8a5d76ccb002526dc29ba23261a834f975efa445acee63bb69c537df44944154"
+  },
+  {
+    "version": "legacy-v1",
+    "path": "README.md",
+    "sha256": "206f24ac2216999440b5099c260cd97e3050fc09e1869a73ddeab64b9fad0e76"
+  },
+  {
+    "version": "legacy-v1",
+    "path": "start-bot.ps1",
+    "sha256": "3d646d2513d0d2e537ab85caac39bf6151cb2a29f4da1f9439401318a2d37a87"
+  },
+  {
+    "version": "legacy-v1",
+    "path": "stop-bot.ps1",
+    "sha256": "cf85fb93c7b8684392f749aef79724171a5828fd757fb8f3ce58604dbfc40135"
+  },
+  {
+    "version": "legacy-v1",
+    "path": "tsconfig.json",
+    "sha256": "2ba8825848e1442a3ee661d76c6f837b8329a446d6c4bfa29f7599902b1b6fa3"
+  },
+  {
+    "version": "legacy-v1",
+    "path": "deploy/Caddyfile.example",
+    "sha256": "7f5b6fea7282a197b274f0a285f923e696f08511414c02f28a6e02c04421c941"
+  },
+  {
+    "version": "legacy-v1",
+    "path": "docs/COPY_TO_ANOTHER_FEISHU_BOT.md",
+    "sha256": "16e3e322bc98779b86780beb17bdb3bf919e6c60081de42e4178bbb70df99683"
+  },
+  {
+    "version": "legacy-v1",
+    "path": "docs/PRODUCTION_DEPLOYMENT.md",
+    "sha256": "b8cbf46b6bf9665cb936eea872767d33c53abb21609804f0ccecbf6e2f4f08f5"
+  },
+  {
+    "version": "legacy-v1",
+    "path": "scripts/diagnose.mjs",
+    "sha256": "f8e877b2761df630ae486a992592cbc12b5e10c601280996e221767bf2fc9e5c"
+  },
+  {
+    "version": "legacy-v1",
+    "path": "src/app.ts",
+    "sha256": "25fb2365893fbbcfa951096f4781d119966374a1456d05f33ca0109fb64ba682"
+  },
+  {
+    "version": "legacy-v1",
+    "path": "src/config.ts",
+    "sha256": "73a552daf499d758b2bff42e4849ed1d2cea33f69dd5cd3aef47bb2e0a43755a"
+  },
+  {
+    "version": "legacy-v1",
+    "path": "src/index.ts",
+    "sha256": "0e989f7f686c2ec494d24f46d35c7d32f05ad2f842441d0ce2fac959a1ef95be"
+  },
+  {
+    "version": "legacy-v1",
+    "path": "src/logger.ts",
+    "sha256": "7f9104763bcd3c9206b1ab44030ab20833338ba79d7f64b74ab51c8252746654"
+  },
+  {
+    "version": "legacy-v1",
+    "path": "tests/bot-flow.test.mjs",
+    "sha256": "f0e213c64bc2afefdbc1bb5d132dcac66294f8d0d9b0584f522b879bd999fa7b"
+  },
+  {
+    "version": "legacy-v1",
+    "path": "src/chat/contractCaseStore.ts",
+    "sha256": "cf074d3f6e08022e27e4f42a79c053fc8bb7d42e3f9f371804337a7b30a2bc28"
+  },
+  {
+    "version": "legacy-v1",
+    "path": "src/chat/contractChatWorkflow.ts",
+    "sha256": "01ef4c023fa6de6c1cacaffc4be63f99cceae2cd1397baa6129dcc37ce760c23"
+  },
+  {
+    "version": "legacy-v1",
+    "path": "src/chat/documentLinks.ts",
+    "sha256": "9fd009667e57ddbb31d523d638400f49d16a2dcc088e66ad42a5ba2839d9cbbc"
+  },
+  {
+    "version": "legacy-v1",
+    "path": "src/chat/intentParser.ts",
+    "sha256": "015d8dfda78e41c934a9661090449394427678360e528d6de0d3ee54183ca41d"
+  },
+  {
+    "version": "legacy-v1",
+    "path": "src/chat/messageParsing.ts",
+    "sha256": "bb8136fa52fc7465af76c58de2bf0903aee7c79d1995226fd951bcb4105d4670"
+  },
+  {
+    "version": "legacy-v1",
+    "path": "src/chat/responsibleOwners.ts",
+    "sha256": "5603618bac9fa90265257cbccb28d73d785cd96975603932bab34b23f751c06f"
+  },
+  {
+    "version": "legacy-v1",
+    "path": "src/domain/types.ts",
+    "sha256": "59c52d3efcf8fb36d7843a346715472dec61dea8abd27626dc7e42ddc09871a2"
+  },
+  {
+    "version": "legacy-v1",
+    "path": "src/feishu/feishuClient.ts",
+    "sha256": "68eb4a598cc1c43dd0ef710fdd63bfcdaabe5efead3392debdf35a95027bc302"
+  },
+  {
+    "version": "legacy-v1",
+    "path": "src/feishu/messageEventMiddleware.ts",
+    "sha256": "7af0734af3fb2f3bed7518987ec57282629c614e96d1f59769be712ee2eb34c6"
+  },
+  {
+    "version": "legacy-v1",
+    "path": "src/feishu/sdkLogger.ts",
+    "sha256": "40e6b527e378d489ea1712074a9369e95d50ac79dee10ea1d69e515d8de922d2"
+  },
+  {
+    "version": "legacy-v1",
+    "path": "src/review/claudeReviewer.ts",
+    "sha256": "bc284dae999b0e23227135d9272c09009b865b61dd80214228cd612e5ea6a2c5"
+  },
+  {
+    "version": "legacy-v1",
+    "path": "src/review/prompt.ts",
+    "sha256": "24b9c0bf241b25bc8da4e764200d7c5f337deb2096765315621faf47d76b3afd"
+  },
+  {
+    "version": "legacy-v1",
+    "path": "src/review/reviewCard.ts",
+    "sha256": "0a5a51e8fe75bc17c3bf0c85f3a1c754d6553f2053341da9ddd71b9f38b8f3e9"
+  },
+  {
+    "version": "legacy-v1",
+    "path": "src/review/reviewProfile.ts",
+    "sha256": "9acca4a754e3357f178b0f2dbaf28fdb406a2f4a0eb18561ea76625d1ba9ebd6"
+  },
+  {
+    "version": "legacy-v1",
+    "path": "src/review/reviewSchema.ts",
+    "sha256": "e95acaf2d1e1b823f0e134084f38cccb5e5ad4e6b92dd25268b5a8a5ad2a173b"
+  },
+  {
+    "version": "legacy-v1",
+    "path": "src/review/skillReferences.ts",
+    "sha256": "0da00436e8adc9675142ded8614bf4d78fa9bc997a08a3f325d506751e8f8bc3"
+  },
+  {
+    "version": "legacy-v1",
+    "path": ".claude/skills/clinical-contract-review/SKILL.md",
+    "sha256": "65333c0a57cea59645bf487cbd35ecb3a61de3808c84ef7443d0d766c0707543"
+  },
+  {
+    "version": "legacy-v1",
+    "path": ".claude/skills/clinical-contract-review/references/business-leader-review.md",
+    "sha256": "5a902694c72e22e807d598433b90699842602a1232420e6b938a0df7c93323ff"
+  },
+  {
+    "version": "legacy-v1",
+    "path": ".claude/skills/clinical-contract-review/references/executive-review.md",
+    "sha256": "87c4c46378635666eaca4eb03fa8f545631b953ad109f69d1d43796a25528e47"
+  },
+  {
+    "version": "legacy-v1",
+    "path": ".claude/skills/clinical-contract-review/references/finance-review.md",
+    "sha256": "fffd8c3dede24a25036059cae15b7f7b65b352ff171567a6652b4beae172c259"
+  },
+  {
+    "version": "legacy-v1",
+    "path": ".claude/skills/clinical-contract-review/references/general-risk-checklist.md",
+    "sha256": "519c2aeda522095e424dc5318e7f0819848a007e73d3bc5e30ce6defa6498a13"
+  },
+  {
+    "version": "legacy-v1",
+    "path": ".claude/skills/clinical-contract-review/references/labor-contract-review.md",
+    "sha256": "f1d4d5ae8b46106344eed624ef00ae88a4a1d6368c214e858d7ee725a360fef0"
+  },
+  {
+    "version": "legacy-v1",
+    "path": ".claude/skills/clinical-contract-review/references/legal-review.md",
+    "sha256": "1f246b17d098b8bf1e9ca7f3c937c3d341be91ffe797fa59c53bb392d7cbb5b2"
+  },
+  {
+    "version": "legacy-v1",
+    "path": ".claude/skills/clinical-contract-review/references/master-agreement-review.md",
+    "sha256": "243fddbd160b4b9787e4074883e8d89eab368831ce198715b17d708196eb4914"
+  },
+  {
+    "version": "legacy-v1",
+    "path": ".claude/skills/clinical-contract-review/references/nda-review.md",
+    "sha256": "52998326b697aad2af0e3c575774b3f08d8fa41295bd7fab4469b52fdaff2a3a"
+  },
+  {
+    "version": "legacy-v1",
+    "path": ".claude/skills/clinical-contract-review/references/part-time-contract-review.md",
+    "sha256": "2f68f1f68c873d499fe07ec02469bfdddfbaf9be67813829ee2092a71e7f1e28"
+  },
+  {
+    "version": "legacy-v1",
+    "path": ".claude/skills/clinical-contract-review/references/service-contract-review.md",
+    "sha256": "01e68668c21e735d7ad7b6c62a4028412d3a474ebb94e58f75d3ad50d0e8a14f"
+  },
+  {
+    "version": "legacy-v1",
+    "path": ".claude/skills/clinical-contract-review/references/system-contract-review.md",
+    "sha256": "fd48318b4c2abcc73ba37da7a4867528b33e713585691646fa8107e7a2b01db9"
+  },
+  {
+    "version": "legacy-v2",
+    "path": ".dockerignore",
+    "sha256": "79cf0f39192db32ca7c0c11bdd55dd84f390ad5800f19f7f92356413f2b73a0a"
+  },
+  {
+    "version": "legacy-v2",
+    "path": ".editorconfig",
+    "sha256": "ab41c8b0021f6fb3af6e6463d465b97359de52ad673bdb0289b846e7e8be15ab"
+  },
+  {
+    "version": "legacy-v2",
+    "path": ".env.example",
+    "sha256": "dca4047cbc8fa6ca989d03f9f09bbf063365402c22a50ccf7ffd6d500d65e40c"
+  },
+  {
+    "version": "legacy-v2",
+    "path": ".gitignore",
+    "sha256": "a82661d7cce672462c52a5411a4852d37dad0fcd895dff62ee22883a51d3e6b0"
+  },
+  {
+    "version": "legacy-v2",
+    "path": "check-bot.ps1",
+    "sha256": "8e9d51323dd8df287cce6b9ec49a9f2a9be1ab8dea2b5d92760b46061392ebf8"
+  },
+  {
+    "version": "legacy-v2",
+    "path": "clear-bot-state.ps1",
+    "sha256": "f13c15c7ba47c9a4bb2a9d36ed99eb94b9f717ed5fd6bff298fbd6b09b6173c5"
+  },
+  {
+    "version": "legacy-v2",
+    "path": "docker-compose.yml",
+    "sha256": "5dc6962a647d8f2e95ead2c0a5b57d38d2edbb8717a2eb34efc4d42f6f63a1d2"
+  },
+  {
+    "version": "legacy-v2",
+    "path": "Dockerfile",
+    "sha256": "94c1c1257e1294602567037a96fb98bb5aef60794018d82d8bb7e8046968fc6d"
+  },
+  {
+    "version": "legacy-v2",
+    "path": "NEW_BOT_MIGRATION.md",
+    "sha256": "571ca3283b8309ec323460f18aa87b951639f1a792c8c7eff5ce3562bac7175a"
+  },
+  {
+    "version": "legacy-v2",
+    "path": "package.json",
+    "sha256": "2ca93591631e02d8982528a3c16c2c35ef0a37f00ad643e43fcb66a953f99916"
+  },
+  {
+    "version": "legacy-v2",
+    "path": "pnpm-lock.yaml",
+    "sha256": "3237cfad8366783f400ea1705dd83843f31d43b7cdc499b1ed86f2bcb0752986"
+  },
+  {
+    "version": "legacy-v2",
+    "path": "pnpm-workspace.yaml",
+    "sha256": "8a5d76ccb002526dc29ba23261a834f975efa445acee63bb69c537df44944154"
+  },
+  {
+    "version": "legacy-v2",
+    "path": "README.md",
+    "sha256": "206f24ac2216999440b5099c260cd97e3050fc09e1869a73ddeab64b9fad0e76"
+  },
+  {
+    "version": "legacy-v2",
+    "path": "start-bot.ps1",
+    "sha256": "1b67b572ad5b96c96fb4b7811d0d7ca5921ad630a6f37a7cda4ce4ce6910fbb5"
+  },
+  {
+    "version": "legacy-v2",
+    "path": "stop-bot.ps1",
+    "sha256": "cf85fb93c7b8684392f749aef79724171a5828fd757fb8f3ce58604dbfc40135"
+  },
+  {
+    "version": "legacy-v2",
+    "path": "tsconfig.json",
+    "sha256": "2ba8825848e1442a3ee661d76c6f837b8329a446d6c4bfa29f7599902b1b6fa3"
+  },
+  {
+    "version": "legacy-v2",
+    "path": "deploy/Caddyfile.example",
+    "sha256": "7f5b6fea7282a197b274f0a285f923e696f08511414c02f28a6e02c04421c941"
+  },
+  {
+    "version": "legacy-v2",
+    "path": "docs/COPY_TO_ANOTHER_FEISHU_BOT.md",
+    "sha256": "16e3e322bc98779b86780beb17bdb3bf919e6c60081de42e4178bbb70df99683"
+  },
+  {
+    "version": "legacy-v2",
+    "path": "docs/PRODUCTION_DEPLOYMENT.md",
+    "sha256": "b8cbf46b6bf9665cb936eea872767d33c53abb21609804f0ccecbf6e2f4f08f5"
+  },
+  {
+    "version": "legacy-v2",
+    "path": "scripts/check-encoding.mjs",
+    "sha256": "7ab96d7842a1cb8e78101343f5f0fa19806780ae8b1a52227f90424e16f733c3"
+  },
+  {
+    "version": "legacy-v2",
+    "path": "scripts/diagnose.mjs",
+    "sha256": "4546911d2e9d3e65c04a9da0baeb589bf1eb3b4e25fdab2526d415f4f99a648f"
+  },
+  {
+    "version": "legacy-v2",
+    "path": "src/app.ts",
+    "sha256": "25fb2365893fbbcfa951096f4781d119966374a1456d05f33ca0109fb64ba682"
+  },
+  {
+    "version": "legacy-v2",
+    "path": "src/config.ts",
+    "sha256": "73a552daf499d758b2bff42e4849ed1d2cea33f69dd5cd3aef47bb2e0a43755a"
+  },
+  {
+    "version": "legacy-v2",
+    "path": "src/index.ts",
+    "sha256": "0e989f7f686c2ec494d24f46d35c7d32f05ad2f842441d0ce2fac959a1ef95be"
+  },
+  {
+    "version": "legacy-v2",
+    "path": "src/logger.ts",
+    "sha256": "7f9104763bcd3c9206b1ab44030ab20833338ba79d7f64b74ab51c8252746654"
+  },
+  {
+    "version": "legacy-v2",
+    "path": "tests/bot-flow.test.mjs",
+    "sha256": "ec6514937007e66d2bbd4dee49a8f128b358195a98c1e45bce818e505252fbdd"
+  },
+  {
+    "version": "legacy-v2",
+    "path": "src/chat/attachmentText.ts",
+    "sha256": "2fbd51891c8aabde4d01048588d7ce4571ee90363a440817e21ff0e8c114cc55"
+  },
+  {
+    "version": "legacy-v2",
+    "path": "src/chat/contractCaseStore.ts",
+    "sha256": "a178e1214fe2ea13a169d37870987a95404453239de68e333ea64cf839c6cf4f"
+  },
+  {
+    "version": "legacy-v2",
+    "path": "src/chat/contractChatWorkflow.ts",
+    "sha256": "93bf598bbae2a515c83b08a17e7de459fa3d9b24c216f43ef2ff91583e3896f5"
+  },
+  {
+    "version": "legacy-v2",
+    "path": "src/chat/documentLinks.ts",
+    "sha256": "9fd009667e57ddbb31d523d638400f49d16a2dcc088e66ad42a5ba2839d9cbbc"
+  },
+  {
+    "version": "legacy-v2",
+    "path": "src/chat/intentParser.ts",
+    "sha256": "015d8dfda78e41c934a9661090449394427678360e528d6de0d3ee54183ca41d"
+  },
+  {
+    "version": "legacy-v2",
+    "path": "src/chat/messageParsing.ts",
+    "sha256": "3b52041f3e957553b2ca59ed28d91e708e08b50fa97c2b6fb6632460f653c47b"
+  },
+  {
+    "version": "legacy-v2",
+    "path": "src/chat/responsibleOwners.ts",
+    "sha256": "5603618bac9fa90265257cbccb28d73d785cd96975603932bab34b23f751c06f"
+  },
+  {
+    "version": "legacy-v2",
+    "path": "src/domain/types.ts",
+    "sha256": "b9b9ea344342063ea39666a147cb1aa1f97755315fa5f1258056e2f1316cb494"
+  },
+  {
+    "version": "legacy-v2",
+    "path": "src/feishu/feishuClient.ts",
+    "sha256": "0ccaddbf992a7e1d2c67f8e644a74f4967989de6e6b8a4c0da322dc6d6a95797"
+  },
+  {
+    "version": "legacy-v2",
+    "path": "src/feishu/messageEventMiddleware.ts",
+    "sha256": "7af0734af3fb2f3bed7518987ec57282629c614e96d1f59769be712ee2eb34c6"
+  },
+  {
+    "version": "legacy-v2",
+    "path": "src/feishu/sdkLogger.ts",
+    "sha256": "40e6b527e378d489ea1712074a9369e95d50ac79dee10ea1d69e515d8de922d2"
+  },
+  {
+    "version": "legacy-v2",
+    "path": "src/review/claudeReviewer.ts",
+    "sha256": "bc284dae999b0e23227135d9272c09009b865b61dd80214228cd612e5ea6a2c5"
+  },
+  {
+    "version": "legacy-v2",
+    "path": "src/review/prompt.ts",
+    "sha256": "24b9c0bf241b25bc8da4e764200d7c5f337deb2096765315621faf47d76b3afd"
+  },
+  {
+    "version": "legacy-v2",
+    "path": "src/review/reviewCard.ts",
+    "sha256": "0d986f108c1875afbb89d2b11ab259ce1bf10dde3884d4ba5f9718121234b19d"
+  },
+  {
+    "version": "legacy-v2",
+    "path": "src/review/reviewProfile.ts",
+    "sha256": "9acca4a754e3357f178b0f2dbaf28fdb406a2f4a0eb18561ea76625d1ba9ebd6"
+  },
+  {
+    "version": "legacy-v2",
+    "path": "src/review/reviewSchema.ts",
+    "sha256": "e95acaf2d1e1b823f0e134084f38cccb5e5ad4e6b92dd25268b5a8a5ad2a173b"
+  },
+  {
+    "version": "legacy-v2",
+    "path": "src/review/skillReferences.ts",
+    "sha256": "0da00436e8adc9675142ded8614bf4d78fa9bc997a08a3f325d506751e8f8bc3"
+  },
+  {
+    "version": "legacy-v2",
+    "path": ".claude/skills/clinical-contract-review/SKILL.md",
+    "sha256": "65333c0a57cea59645bf487cbd35ecb3a61de3808c84ef7443d0d766c0707543"
+  },
+  {
+    "version": "legacy-v2",
+    "path": ".claude/skills/clinical-contract-review/references/business-leader-review.md",
+    "sha256": "5a902694c72e22e807d598433b90699842602a1232420e6b938a0df7c93323ff"
+  },
+  {
+    "version": "legacy-v2",
+    "path": ".claude/skills/clinical-contract-review/references/executive-review.md",
+    "sha256": "87c4c46378635666eaca4eb03fa8f545631b953ad109f69d1d43796a25528e47"
+  },
+  {
+    "version": "legacy-v2",
+    "path": ".claude/skills/clinical-contract-review/references/finance-review.md",
+    "sha256": "fffd8c3dede24a25036059cae15b7f7b65b352ff171567a6652b4beae172c259"
+  },
+  {
+    "version": "legacy-v2",
+    "path": ".claude/skills/clinical-contract-review/references/general-risk-checklist.md",
+    "sha256": "519c2aeda522095e424dc5318e7f0819848a007e73d3bc5e30ce6defa6498a13"
+  },
+  {
+    "version": "legacy-v2",
+    "path": ".claude/skills/clinical-contract-review/references/labor-contract-review.md",
+    "sha256": "f1d4d5ae8b46106344eed624ef00ae88a4a1d6368c214e858d7ee725a360fef0"
+  },
+  {
+    "version": "legacy-v2",
+    "path": ".claude/skills/clinical-contract-review/references/legal-review.md",
+    "sha256": "1f246b17d098b8bf1e9ca7f3c937c3d341be91ffe797fa59c53bb392d7cbb5b2"
+  },
+  {
+    "version": "legacy-v2",
+    "path": ".claude/skills/clinical-contract-review/references/master-agreement-review.md",
+    "sha256": "243fddbd160b4b9787e4074883e8d89eab368831ce198715b17d708196eb4914"
+  },
+  {
+    "version": "legacy-v2",
+    "path": ".claude/skills/clinical-contract-review/references/nda-review.md",
+    "sha256": "52998326b697aad2af0e3c575774b3f08d8fa41295bd7fab4469b52fdaff2a3a"
+  },
+  {
+    "version": "legacy-v2",
+    "path": ".claude/skills/clinical-contract-review/references/part-time-contract-review.md",
+    "sha256": "2f68f1f68c873d499fe07ec02469bfdddfbaf9be67813829ee2092a71e7f1e28"
+  },
+  {
+    "version": "legacy-v2",
+    "path": ".claude/skills/clinical-contract-review/references/service-contract-review.md",
+    "sha256": "01e68668c21e735d7ad7b6c62a4028412d3a474ebb94e58f75d3ad50d0e8a14f"
+  },
+  {
+    "version": "legacy-v2",
+    "path": ".claude/skills/clinical-contract-review/references/system-contract-review.md",
+    "sha256": "fd48318b4c2abcc73ba37da7a4867528b33e713585691646fa8107e7a2b01db9"
+  },
+  {
+    "version": "current",
+    "path": ".dockerignore",
+    "sha256": "79cf0f39192db32ca7c0c11bdd55dd84f390ad5800f19f7f92356413f2b73a0a"
+  },
+  {
+    "version": "current",
+    "path": ".editorconfig",
+    "sha256": "ab41c8b0021f6fb3af6e6463d465b97359de52ad673bdb0289b846e7e8be15ab"
+  },
+  {
+    "version": "current",
+    "path": ".env.example",
+    "sha256": "dca4047cbc8fa6ca989d03f9f09bbf063365402c22a50ccf7ffd6d500d65e40c"
+  },
+  {
+    "version": "current",
+    "path": ".gitignore",
+    "sha256": "a82661d7cce672462c52a5411a4852d37dad0fcd895dff62ee22883a51d3e6b0"
+  },
+  {
+    "version": "current",
+    "path": "check-bot.ps1",
+    "sha256": "8e9d51323dd8df287cce6b9ec49a9f2a9be1ab8dea2b5d92760b46061392ebf8"
+  },
+  {
+    "version": "current",
+    "path": "clear-bot-state.ps1",
+    "sha256": "f13c15c7ba47c9a4bb2a9d36ed99eb94b9f717ed5fd6bff298fbd6b09b6173c5"
+  },
+  {
+    "version": "current",
+    "path": "docker-compose.yml",
+    "sha256": "5dc6962a647d8f2e95ead2c0a5b57d38d2edbb8717a2eb34efc4d42f6f63a1d2"
+  },
+  {
+    "version": "current",
+    "path": "Dockerfile",
+    "sha256": "94c1c1257e1294602567037a96fb98bb5aef60794018d82d8bb7e8046968fc6d"
+  },
+  {
+    "version": "current",
+    "path": "NEW_BOT_MIGRATION.md",
+    "sha256": "571ca3283b8309ec323460f18aa87b951639f1a792c8c7eff5ce3562bac7175a"
+  },
+  {
+    "version": "current",
+    "path": "package.json",
+    "sha256": "b042a99702873ceb30e1c6e400de8357049e67fb8e9473a4af4f82e0cbd90233"
+  },
+  {
+    "version": "current",
+    "path": "pnpm-lock.yaml",
+    "sha256": "3237cfad8366783f400ea1705dd83843f31d43b7cdc499b1ed86f2bcb0752986"
+  },
+  {
+    "version": "current",
+    "path": "pnpm-workspace.yaml",
+    "sha256": "8a5d76ccb002526dc29ba23261a834f975efa445acee63bb69c537df44944154"
+  },
+  {
+    "version": "current",
+    "path": "README.md",
+    "sha256": "473f0c60d23bd2157bb1439ade2ca83c93cdea63b27dfd04ed06fed23afebb24"
+  },
+  {
+    "version": "current",
+    "path": "start-bot.ps1",
+    "sha256": "1b67b572ad5b96c96fb4b7811d0d7ca5921ad630a6f37a7cda4ce4ce6910fbb5"
+  },
+  {
+    "version": "current",
+    "path": "stop-bot.ps1",
+    "sha256": "cf85fb93c7b8684392f749aef79724171a5828fd757fb8f3ce58604dbfc40135"
+  },
+  {
+    "version": "current",
+    "path": "tsconfig.json",
+    "sha256": "2ba8825848e1442a3ee661d76c6f837b8329a446d6c4bfa29f7599902b1b6fa3"
+  },
+  {
+    "version": "current",
+    "path": "deploy/Caddyfile.example",
+    "sha256": "7f5b6fea7282a197b274f0a285f923e696f08511414c02f28a6e02c04421c941"
+  },
+  {
+    "version": "current",
+    "path": "docs/COPY_TO_ANOTHER_FEISHU_BOT.md",
+    "sha256": "2650a627645509d6a04c3c931c1894b102b7b14d60de840642d1449480e108ac"
+  },
+  {
+    "version": "current",
+    "path": "docs/PRODUCTION_DEPLOYMENT.md",
+    "sha256": "e11657d9ce20e715dfc52199a27e81e498a588d42fa5dc5b365986a811ad5bf1"
+  },
+  {
+    "version": "current",
+    "path": "scripts/backfill-tasks.mjs",
+    "sha256": "c4dfa0cc456b9b107f6b4c301a28d1a0901430448266ad485174241090d1c569"
+  },
+  {
+    "version": "current",
+    "path": "scripts/check-encoding.mjs",
+    "sha256": "41e4adf993aefbe925db160269df942ed3f7e6ea9ea0aed541fe74803cfa27fb"
+  },
+  {
+    "version": "current",
+    "path": "scripts/diagnose.mjs",
+    "sha256": "58a3c4271aa6c097191ed9bf8ad1faedcce595a49d2cb050361bcc3b0ffaee5a"
+  },
+  {
+    "version": "current",
+    "path": "scripts/test-feishu-import.mjs",
+    "sha256": "f826e78672fbbc4443a974092c2a5d9667b801caede2d1996fcce3bd3dfc841e"
+  },
+  {
+    "version": "current",
+    "path": "src/app.ts",
+    "sha256": "25fb2365893fbbcfa951096f4781d119966374a1456d05f33ca0109fb64ba682"
+  },
+  {
+    "version": "current",
+    "path": "src/config.ts",
+    "sha256": "5de52666f928820167233aa91d6fecbf9222f48650ca66857cc5cfa87870fbae"
+  },
+  {
+    "version": "current",
+    "path": "src/index.ts",
+    "sha256": "0e989f7f686c2ec494d24f46d35c7d32f05ad2f842441d0ce2fac959a1ef95be"
+  },
+  {
+    "version": "current",
+    "path": "src/logger.ts",
+    "sha256": "e85cc9ed9739ef7946b358980381345107887a420bbaf572c9c6d07064cbead9"
+  },
+  {
+    "version": "current",
+    "path": "tests/bot-flow.test.mjs",
+    "sha256": "c84cb1be7cd663af942b8b8e9e6d36b5c1c92d6fe07bc958f146c0a8a12d5f0e"
+  },
+  {
+    "version": "current",
+    "path": "tests/feishu-api-contracts.test.mjs",
+    "sha256": "a9da98e59fa497194e41851ced52e79475691c323e5416a1446f8f8127a9bff4"
+  },
+  {
+    "version": "current",
+    "path": "tests/store-migration.test.mjs",
+    "sha256": "693c56ef7b4f39a7f346de74a28f3af1370d29cc8abae932d2df1539f49d09f1"
+  },
+  {
+    "version": "current",
+    "path": "tests/workflow-v2.test.mjs",
+    "sha256": "42fee442809c4b4b4570016ae823be7df24e83d0ce8b6f007e0c336682ea706a"
+  },
+  {
+    "version": "current",
+    "path": "src/chat/attachmentText.ts",
+    "sha256": "4258a24da07fff41910863a3e5c642b3422e61520da974ab5cd27ccdae8d9418"
+  },
+  {
+    "version": "current",
+    "path": "src/chat/contractCaseStore.ts",
+    "sha256": "a073a1443e1eca10064d4417ae5438b682752a5381df69220d5799937928404f"
+  },
+  {
+    "version": "current",
+    "path": "src/chat/contractChatWorkflow.ts",
+    "sha256": "4a1b5c73e048a8beee13800413b7873904862d2364e49adbe8169f87bdda8177"
+  },
+  {
+    "version": "current",
+    "path": "src/chat/documentArchive.ts",
+    "sha256": "4c243018d73214a5f7dbfe9e8340ca5499e0e6effc863385c0a6fe7f61144975"
+  },
+  {
+    "version": "current",
+    "path": "src/chat/documentLinks.ts",
+    "sha256": "9fd009667e57ddbb31d523d638400f49d16a2dcc088e66ad42a5ba2839d9cbbc"
+  },
+  {
+    "version": "current",
+    "path": "src/chat/intentParser.ts",
+    "sha256": "87f73ec8017ba76bdbe79fe598e09b7967fa20cedb17cd1b7622c2e5e9a72be3"
+  },
+  {
+    "version": "current",
+    "path": "src/chat/messageParsing.ts",
+    "sha256": "3b52041f3e957553b2ca59ed28d91e708e08b50fa97c2b6fb6632460f653c47b"
+  },
+  {
+    "version": "current",
+    "path": "src/chat/responsibleOwners.ts",
+    "sha256": "23e81cf042e4e3c5b9463a3f47aadaf7ef06ae3f0d89110ca0dd97c34cc3f991"
+  },
+  {
+    "version": "current",
+    "path": "src/chat/taskCoordinator.ts",
+    "sha256": "7b4ccf2fb242f23a74679acc362be9658abff7aa814eaadf9345ad6224f133ea"
+  },
+  {
+    "version": "current",
+    "path": "src/domain/types.ts",
+    "sha256": "51ac4ed4c96eeec785b85db422d9a3b85e69b5340684c17b0d3f97ef94acd438"
+  },
+  {
+    "version": "current",
+    "path": "src/feishu/feishuClient.ts",
+    "sha256": "75c33fbfe6eaf648ee69d52ca7a42ca65120068721657a18e2ac627358df1788"
+  },
+  {
+    "version": "current",
+    "path": "src/feishu/feishuErrors.ts",
+    "sha256": "5d90e919acd69ff2bd06979a8619876a8a5e33d72808bcc44c55a18db9d4bdf8"
+  },
+  {
+    "version": "current",
+    "path": "src/feishu/messageEventMiddleware.ts",
+    "sha256": "7af0734af3fb2f3bed7518987ec57282629c614e96d1f59769be712ee2eb34c6"
+  },
+  {
+    "version": "current",
+    "path": "src/feishu/sdkLogger.ts",
+    "sha256": "35a0627d30e3fb893e250776f7ca5e280c7da062c8da277dec0075b97faf31b2"
+  },
+  {
+    "version": "current",
+    "path": "src/review/claudeReviewer.ts",
+    "sha256": "bc284dae999b0e23227135d9272c09009b865b61dd80214228cd612e5ea6a2c5"
+  },
+  {
+    "version": "current",
+    "path": "src/review/prompt.ts",
+    "sha256": "24b9c0bf241b25bc8da4e764200d7c5f337deb2096765315621faf47d76b3afd"
+  },
+  {
+    "version": "current",
+    "path": "src/review/reviewCard.ts",
+    "sha256": "061fa580182214058d562e9e7f91d2e5b478a17953909b4c9e5df592832356e8"
+  },
+  {
+    "version": "current",
+    "path": "src/review/reviewProfile.ts",
+    "sha256": "9acca4a754e3357f178b0f2dbaf28fdb406a2f4a0eb18561ea76625d1ba9ebd6"
+  },
+  {
+    "version": "current",
+    "path": "src/review/reviewSchema.ts",
+    "sha256": "e95acaf2d1e1b823f0e134084f38cccb5e5ad4e6b92dd25268b5a8a5ad2a173b"
+  },
+  {
+    "version": "current",
+    "path": "src/review/skillReferences.ts",
+    "sha256": "0da00436e8adc9675142ded8614bf4d78fa9bc997a08a3f325d506751e8f8bc3"
+  },
+  {
+    "version": "current",
+    "path": ".claude/skills/clinical-contract-review/SKILL.md",
+    "sha256": "65333c0a57cea59645bf487cbd35ecb3a61de3808c84ef7443d0d766c0707543"
+  },
+  {
+    "version": "current",
+    "path": ".claude/skills/clinical-contract-review/references/business-leader-review.md",
+    "sha256": "5a902694c72e22e807d598433b90699842602a1232420e6b938a0df7c93323ff"
+  },
+  {
+    "version": "current",
+    "path": ".claude/skills/clinical-contract-review/references/executive-review.md",
+    "sha256": "87c4c46378635666eaca4eb03fa8f545631b953ad109f69d1d43796a25528e47"
+  },
+  {
+    "version": "current",
+    "path": ".claude/skills/clinical-contract-review/references/finance-review.md",
+    "sha256": "fffd8c3dede24a25036059cae15b7f7b65b352ff171567a6652b4beae172c259"
+  },
+  {
+    "version": "current",
+    "path": ".claude/skills/clinical-contract-review/references/general-risk-checklist.md",
+    "sha256": "519c2aeda522095e424dc5318e7f0819848a007e73d3bc5e30ce6defa6498a13"
+  },
+  {
+    "version": "current",
+    "path": ".claude/skills/clinical-contract-review/references/labor-contract-review.md",
+    "sha256": "f1d4d5ae8b46106344eed624ef00ae88a4a1d6368c214e858d7ee725a360fef0"
+  },
+  {
+    "version": "current",
+    "path": ".claude/skills/clinical-contract-review/references/legal-review.md",
+    "sha256": "1f246b17d098b8bf1e9ca7f3c937c3d341be91ffe797fa59c53bb392d7cbb5b2"
+  },
+  {
+    "version": "current",
+    "path": ".claude/skills/clinical-contract-review/references/master-agreement-review.md",
+    "sha256": "243fddbd160b4b9787e4074883e8d89eab368831ce198715b17d708196eb4914"
+  },
+  {
+    "version": "current",
+    "path": ".claude/skills/clinical-contract-review/references/nda-review.md",
+    "sha256": "52998326b697aad2af0e3c575774b3f08d8fa41295bd7fab4469b52fdaff2a3a"
+  },
+  {
+    "version": "current",
+    "path": ".claude/skills/clinical-contract-review/references/part-time-contract-review.md",
+    "sha256": "2f68f1f68c873d499fe07ec02469bfdddfbaf9be67813829ee2092a71e7f1e28"
+  },
+  {
+    "version": "current",
+    "path": ".claude/skills/clinical-contract-review/references/service-contract-review.md",
+    "sha256": "01e68668c21e735d7ad7b6c62a4028412d3a474ebb94e58f75d3ad50d0e8a14f"
+  },
+  {
+    "version": "current",
+    "path": ".claude/skills/clinical-contract-review/references/system-contract-review.md",
+    "sha256": "fd48318b4c2abcc73ba37da7a4867528b33e713585691646fa8107e7a2b01db9"
+  },
+  {
+    "version": "legacy-v1",
+    "path": "deploy/production.env.template",
+    "sha256": "ad88c1dcf603a5574326406529ddab80be76450e2b495325100985ee9dfc6be0"
+  },
+  {
+    "version": "legacy-v2",
+    "path": "deploy/production.env.template",
+    "sha256": "ad88c1dcf603a5574326406529ddab80be76450e2b495325100985ee9dfc6be0"
+  },
+  {
+    "version": "current",
+    "path": "deploy/production.env.template",
+    "sha256": "388c2392f5600a9591ead97a15daf894770559575ce5a5429bc645aa2a2ea97f"
+  }
+]

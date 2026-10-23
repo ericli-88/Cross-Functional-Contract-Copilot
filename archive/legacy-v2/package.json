@@ -1,0 +1,40 @@
+{
+  "name": "feishu-contract-chat-bot",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@11.9.0",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "start": "node dist/src/index.js",
+    "build": "tsc -p tsconfig.json",
+    "check:encoding": "node scripts/check-encoding.mjs",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "pnpm check:encoding && pnpm build && node tests/bot-flow.test.mjs",
+    "diagnose": "pnpm build && node scripts/diagnose.mjs"
+  },
+  "dependencies": {
+    "@larksuiteoapi/node-sdk": "^1.49.0",
+    "dotenv": "^16.4.7",
+    "express": "^4.19.2",
+    "iconv-lite": "^0.7.3",
+    "jszip": "^3.10.1",
+    "pino": "^9.5.0",
+    "pino-http": "^10.4.0",
+    "zod": "^4.0.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^22.10.2",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  },
+  "overrides": {
+    "@larksuiteoapi/node-sdk": {
+      "axios": "1.18.1"
+    }
+  }
+}

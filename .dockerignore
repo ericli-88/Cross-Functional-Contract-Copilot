@@ -1,0 +1,12 @@
+.env
+.env.*
+data
+dist
+node_modules
+*.log
+bot-server*.log
+bot-server*.err.log
+cloudflared.log
+.git
+.gitignore
+README.local.md

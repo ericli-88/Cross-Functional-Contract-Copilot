@@ -1,0 +1,9 @@
+contracts.example.com {
+	reverse_proxy 127.0.0.1:4302
+}
+
+# If you run a second Feishu bot on the same server, give it a second hostname
+# and a different HOST_PORT in that bot's .env.
+contracts-bot2.example.com {
+	reverse_proxy 127.0.0.1:4303
+}
