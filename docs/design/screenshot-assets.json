@@ -1,0 +1,54 @@
+{
+  "method": "built-in image_gen; official-reference-guided simulated Feishu desktop scenes",
+  "date": "2026-10-23",
+  "assets": [
+    {
+      "file": "01-functional-review.png",
+      "dimensions": [
+        1586,
+        992
+      ],
+      "sha256": "4fb8026c92b3545ce3a12e3a7cbc49a5007626e627b4584708cb783317dc99d7"
+    },
+    {
+      "file": "02-group-intake.png",
+      "dimensions": [
+        1586,
+        992
+      ],
+      "sha256": "b254593406001cbfef38d73394bbf8b4d868730e1c44560ac939fdbb8207c808"
+    },
+    {
+      "file": "03-owner-guidance.png",
+      "dimensions": [
+        1586,
+        992
+      ],
+      "sha256": "3ccd6e0c07acda5448d54df5b26bed60e4206162c4f195c535edf9635a141b9a"
+    },
+    {
+      "file": "04-version-workflow.png",
+      "dimensions": [
+        1586,
+        992
+      ],
+      "sha256": "49fbc61f9a6b7e08722cc18471977ed41a90eb658e60d653575e5708725e61da"
+    },
+    {
+      "file": "05-status-control.png",
+      "dimensions": [
+        1586,
+        992
+      ],
+      "sha256": "502e00becdef9ff98fab84c8fa458cb4e84d0d952126768e0c0db1eaef9f089d"
+    },
+    {
+      "file": "06-input-boundaries.png",
+      "dimensions": [
+        1586,
+        992
+      ],
+      "sha256": "3b2ccf59eabdbbcf0f76ba4d7e68b9e400645757f7e272daa07aee7be880e633"
+    }
+  ]
+}

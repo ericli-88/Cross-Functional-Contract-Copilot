@@ -10,3 +10,6 @@ data/
 .DS_Store
 Thumbs.db
 artifacts/private/
+
+# Local-only official UI reference downloads
+docs/design-references/

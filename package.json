@@ -19,7 +19,7 @@
     "tasks:backfill": "pnpm build && node scripts/backfill-tasks.mjs",
     "demo": "pnpm build && node scripts/demo.mjs && node scripts/export-portfolio.mjs",
     "verify:live": "pnpm build && node scripts/live-smoke.mjs",
-    "docs:images": "pnpm demo && python scripts/render-scenes.py"
+    "docs:images": "python scripts/verify-screenshots.py"
   },
   "dependencies": {
     "@larksuiteoapi/node-sdk": "^1.49.0",

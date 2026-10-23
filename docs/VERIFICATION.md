@@ -11,7 +11,7 @@ Verification date: **October 23, 2026**. The accepted scope is a buildable frame
 | `pnpm test` | Encoding, build, five regression/integration test programs |
 | `pnpm demo` | 11 workflow scenes, deterministic review fixtures, no network calls; English documentation export |
 | Compiled entry-point startup | The compiled server starts with offline placeholder configuration and responds to `/healthz` |
-| `python scripts/render-scenes.py` | Regenerates English documentation figures; Python, Pillow and an English UI font required |
+| `python scripts/verify-screenshots.py` | Verifies selected screenshot hashes, dimensions and PNG format without modifying assets |
 
 CI uses Windows/Linux with Node.js 22/24. The current result is available in [GitHub Actions](https://github.com/ericli-88/cross-functional-contract-copilot/actions). Do not infer live permissions or model quality from a passing offline job.
 
@@ -29,9 +29,9 @@ The authentication regression found and fixed an SDK integration gap: without an
 
 `pnpm demo` runs `ContractChatWorkflow`, local storage, archive and task coordinators against in-memory Feishu and deterministic AI adapters. Assertions check versions, tasks, notifications and skipped calls. Raw Chinese-language cards are exported to `docs/demo/scenes.json`.
 
-`scripts/export-portfolio.mjs` checks the required scene IDs and actual role definitions, then exports English editorial summaries to `docs/demo/portfolio.json`. The figures are deliberately shorter than runtime cards. They use fictional English names and the same demo findings; they are not pixel-exact runtime screenshots or generated live AI results. English documentation does not imply English command/card/model-output support.
+`scripts/export-portfolio.mjs` checks the required scene IDs and actual role definitions, then exports English editorial summaries to `docs/demo/portfolio.json`. The selected figures are simulated native Feishu desktop conversations, made with official visual references and built-in ImageGen editing. They use fictional English names and workflow-based message copy. They are not live captures or generated live contract-review results. English documentation does not imply English command/card/model-output support.
 
-The original 11 long Chinese figures were replaced with focused, readable English figures. Rendering uses local code and fonts, not image-generation claims about product behavior.
+The previous presentation-style custom renderer was removed. The new images preserve native navigation, chat lists, sender rows, cards, buttons and composer controls. See [Screenshot provenance and prompts](design/SCREENSHOTS.md) for the full visual workflow.
 
 ## Current behavioral corrections
 

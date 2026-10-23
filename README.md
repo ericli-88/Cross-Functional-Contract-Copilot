@@ -13,7 +13,7 @@ The focus is the handoff from **“what should change in this contract?”** to 
 
 ![One contract reviewed through Finance, Operations, Commercial, and Legal perspectives, with suggested contract revisions for each function](docs/images/01-functional-review.png)
 
-> **Demo disclosure:** All figures are English-language documentation renderings of the existing Chinese-language deployment. They use fictional data and offline workflow evidence, not live Feishu screenshots. The runtime has not been translated into English.
+> **Demo disclosure:** All figures are English-localized simulated Feishu desktop screenshots, created with official client references and fictional contract-bot conversations. They are not live execution captures. The runtime has not been translated into English.
 
 [Try the offline workflow](#run-the-offline-workflow) · [Complete capability inventory](docs/CAPABILITIES.md) · [Setup](docs/SETUP.md) · [Verification](docs/VERIFICATION.md) · [Architecture](#architecture)
 
@@ -36,19 +36,19 @@ Each role produces its own structured result: contract category, risk level, rec
 
 Mention the bot with a Feishu `docx`, legacy `docs`, or `wiki` link. It can also resolve document links and supported attachments from a replied-to message. The group receives a role summary and the original document link.
 
-![English Feishu-style group intake and a compact four-function review overview](docs/images/02-group-intake.png)
+![Native Feishu group chat showing a linked document submission and review-started acknowledgement](docs/images/02-group-intake.png)
 
 ### 2. Deliver actionable guidance to the right owners
 
 The first review sends each configured owner a role card and task entry point. Detailed findings and revision actions live in task comments. A role can have multiple owners. Subsequent versions update the existing active role task rather than creating a task per version; normal owner DMs are suppressed after V1 when task synchronization succeeds.
 
-![Finance owner receives a payment-risk finding, a suggested contract revision, and a task entry point](docs/images/03-owner-guidance.png)
+![Native Feishu bot DM showing the Finance role card, department status and task/history entry buttons](docs/images/03-owner-guidance.png)
 
 ### 3. Review revisions without repeating unchanged work
 
 Submitting an existing document again re-reads its content. Identical content produces a no-change card and skips AI review, new version creation, task updates, and owner DMs. Changed content becomes V2, V3, and so on, with new recommendations appended to active task comments.
 
-![First review, unchanged-content skip, and changed-content re-review shown as three distinct workflow branches](docs/images/04-version-workflow.png)
+![Native Feishu chat showing an unchanged-content card followed by a revised document and V2 review acknowledgement](docs/images/04-version-workflow.png)
 
 ### 4. Keep department status under human control
 
@@ -56,13 +56,13 @@ Configured owners can mark a department complete or reopen it, using a contract 
 
 **Current lifecycle:** completion deletes the associated role task and its local task mapping. Reopening changes the department status; a replacement task is created on the next changed-content review. Historical AI results remain in local version records, but task-comment history is not guaranteed to survive task deletion. Any configured owner may update a department, not only that department's owner.
 
-![Human completion and reopening, with the current task-deletion behavior explicitly disclosed](docs/images/05-status-control.png)
+![Native Feishu green and blue bot cards confirm human completion and reopening of Finance](docs/images/05-status-control.png)
 
 ### 5. Make input and archive behavior explicit
 
 Online documents retain their original URL. With archiving enabled, the bot creates a per-group folder, a contract subfolder and shortcut, and version snapshots for `docx`. Ordinary attachments support basic text extraction; they are not automatically converted to online documents or given contract-opening links.
 
-![Online document and ordinary attachment workflows compared, including unsupported features](docs/images/06-input-boundaries.png)
+![Native Feishu Word attachment, quoted reply and bot review card without an online-document link](docs/images/06-input-boundaries.png)
 
 ## Capability checklist
 
@@ -90,10 +90,10 @@ pnpm demo
 
 The demo executes the real workflow against in-memory Feishu and deterministic review adapters. It verifies **11 scenarios**, including first review, duplicate-content detection, re-review, task reuse, status changes, attachments, archiving, and local-record reset. It exports raw workflow cards and an English documentation view to `docs/demo/`.
 
-To regenerate the English figures, install Python and Pillow, then run:
+The figures use reference-guided ImageGen editing to preserve the real client layout. See [Screenshot provenance and prompts](docs/design/SCREENSHOTS.md). To verify the committed assets without redrawing them, run:
 
 ```sh
-python scripts/render-scenes.py
+python scripts/verify-screenshots.py
 ```
 
 ## Connect to Feishu
